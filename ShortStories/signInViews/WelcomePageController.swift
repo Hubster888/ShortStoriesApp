@@ -20,8 +20,5 @@ class WelcomePageController: UIViewController {
             self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
         }
     }
-
-
-
 }
 

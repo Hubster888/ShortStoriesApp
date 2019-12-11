@@ -12,11 +12,13 @@ import Firebase
 import GoogleSignIn
 
 class LogInView: UIViewController, GIDSignInDelegate{
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             print(error.localizedDescription)
             return
         }
+        
         guard let auth = user.authentication else {return}
         let credentials = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
         Auth.auth().signIn(with: credentials) {
@@ -28,7 +30,6 @@ class LogInView: UIViewController, GIDSignInDelegate{
                 self.performSegue(withIdentifier: "HomeViewSegue", sender: self)
             }
         }
-        
     }
     
     @IBOutlet weak var emailField: UITextField!
@@ -36,6 +37,7 @@ class LogInView: UIViewController, GIDSignInDelegate{
     @IBAction func logInWithGoogle(_ sender: Any) {
         GIDSignIn.sharedInstance()?.signIn()
     }
+    
     @IBAction func logInButton(_ sender: Any) {
         // The login details are checked and the user is loged in
         Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!){(user, error)
@@ -50,7 +52,6 @@ class LogInView: UIViewController, GIDSignInDelegate{
                 self.present(alertController, animated: true, completion: nil)
             }
         }
-
     }
     
     override func viewDidLoad(){

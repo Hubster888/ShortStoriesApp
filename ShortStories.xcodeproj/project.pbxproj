@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1DA269239E477B00C64127 /* readMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DA268239E477B00C64127 /* readMainViewController.swift */; };
 		2C2CAF1A238BEDB90062D3D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C2CAF19238BEDB90062D3D0 /* GoogleService-Info.plist */; };
 		2C654851238C326F00DA6A82 /* TabNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C654850238C326F00DA6A82 /* TabNavigationController.swift */; };
+		2C81D9A3239469B200ED2FFF /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81D9A2239469B200ED2FFF /* Story.swift */; };
+		2C81D9A72394F2B300ED2FFF /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81D9A62394F2B300ED2FFF /* WriteViewController.swift */; };
+		2CB5D4FF238D3E3C0053DF20 /* CreatePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB5D4FE238D3E3C0053DF20 /* CreatePageViewController.swift */; };
+		2CB5D504238D412E0053DF20 /* BookCellsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB5D502238D412E0053DF20 /* BookCellsTableViewCell.swift */; };
+		2CB5D505238D412E0053DF20 /* BookCellsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB5D503238D412E0053DF20 /* BookCellsTableViewCell.xib */; };
 		2CD5BEE2238BCF4600DA91DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5BEE1238BCF4600DA91DF /* AppDelegate.swift */; };
 		2CD5BEE4238BCF4600DA91DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5BEE3238BCF4600DA91DF /* SceneDelegate.swift */; };
 		2CD5BEE6238BCF4600DA91DF /* WelcomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD5BEE5238BCF4600DA91DF /* WelcomePageController.swift */; };
@@ -24,8 +30,14 @@
 
 /* Begin PBXFileReference section */
 		03BB8BF9EC368992FAEBE3B6 /* Pods-ShortStories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShortStories.debug.xcconfig"; path = "Target Support Files/Pods-ShortStories/Pods-ShortStories.debug.xcconfig"; sourceTree = "<group>"; };
+		2C1DA268239E477B00C64127 /* readMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = readMainViewController.swift; sourceTree = "<group>"; };
 		2C2CAF19238BEDB90062D3D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C654850238C326F00DA6A82 /* TabNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationController.swift; sourceTree = "<group>"; };
+		2C81D9A2239469B200ED2FFF /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Story.swift; path = /Users/hubertrzeminski/Desktop/ShortStories/ShortStories/CustomClasses/Story.swift; sourceTree = "<absolute>"; };
+		2C81D9A62394F2B300ED2FFF /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		2CB5D4FE238D3E3C0053DF20 /* CreatePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePageViewController.swift; sourceTree = "<group>"; };
+		2CB5D502238D412E0053DF20 /* BookCellsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellsTableViewCell.swift; sourceTree = "<group>"; };
+		2CB5D503238D412E0053DF20 /* BookCellsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCellsTableViewCell.xib; sourceTree = "<group>"; };
 		2CD5BEDE238BCF4600DA91DF /* ShortStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShortStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD5BEE1238BCF4600DA91DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CD5BEE3238BCF4600DA91DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +75,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2CB5D506238D43430053DF20 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				2C81D9A2239469B200ED2FFF /* Story.swift */,
+				2CB5D502238D412E0053DF20 /* BookCellsTableViewCell.swift */,
+				2CB5D503238D412E0053DF20 /* BookCellsTableViewCell.xib */,
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
 		2CD5BED5238BCF4600DA91DF = {
 			isa = PBXGroup;
 			children = (
@@ -84,11 +106,12 @@
 		2CD5BEE0238BCF4600DA91DF /* ShortStories */ = {
 			isa = PBXGroup;
 			children = (
+				2CF487F6238C0DE0008F1326 /* MainViews */,
+				2CD5BEF8238BD24E00DA91DF /* signInViews */,
+				2CB5D506238D43430053DF20 /* CustomClasses */,
 				2CD5BEE1238BCF4600DA91DF /* AppDelegate.swift */,
 				2CD5BEE3238BCF4600DA91DF /* SceneDelegate.swift */,
 				2C2CAF19238BEDB90062D3D0 /* GoogleService-Info.plist */,
-				2CF487F6238C0DE0008F1326 /* MainViews */,
-				2CD5BEF8238BD24E00DA91DF /* signInViews */,
 				2CD5BEE7238BCF4600DA91DF /* Main.storyboard */,
 				2C654850238C326F00DA6A82 /* TabNavigationController.swift */,
 				2CD5BEED238BCF4800DA91DF /* Assets.xcassets */,
@@ -113,6 +136,9 @@
 			isa = PBXGroup;
 			children = (
 				2CF487F4238C0DD3008F1326 /* HomeViewController.swift */,
+				2CB5D4FE238D3E3C0053DF20 /* CreatePageViewController.swift */,
+				2C81D9A62394F2B300ED2FFF /* WriteViewController.swift */,
+				2C1DA268239E477B00C64127 /* readMainViewController.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -190,6 +216,7 @@
 				2C2CAF1A238BEDB90062D3D0 /* GoogleService-Info.plist in Resources */,
 				2CD5BEEE238BCF4800DA91DF /* Assets.xcassets in Resources */,
 				2CD5BEE9238BCF4600DA91DF /* Main.storyboard in Resources */,
+				2CB5D505238D412E0053DF20 /* BookCellsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,9 +291,14 @@
 				2CD5BEE2238BCF4600DA91DF /* AppDelegate.swift in Sources */,
 				2C654851238C326F00DA6A82 /* TabNavigationController.swift in Sources */,
 				2CD5BEEC238BCF4600DA91DF /* ShortStories.xcdatamodeld in Sources */,
+				2C1DA269239E477B00C64127 /* readMainViewController.swift in Sources */,
 				2CD5BEFC238BD2F600DA91DF /* SignUpView.swift in Sources */,
+				2C81D9A72394F2B300ED2FFF /* WriteViewController.swift in Sources */,
 				2CF487F5238C0DD3008F1326 /* HomeViewController.swift in Sources */,
 				2CD5BEE4238BCF4600DA91DF /* SceneDelegate.swift in Sources */,
+				2CB5D504238D412E0053DF20 /* BookCellsTableViewCell.swift in Sources */,
+				2CB5D4FF238D3E3C0053DF20 /* CreatePageViewController.swift in Sources */,
+				2C81D9A3239469B200ED2FFF /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

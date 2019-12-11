@@ -12,6 +12,7 @@ import Firebase
 import GoogleSignIn
 
 class SignUpView: UIViewController, GIDSignInDelegate{
+    var ref = Database.database().reference()
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var confirmPasswordField: UITextField!
@@ -21,6 +22,7 @@ class SignUpView: UIViewController, GIDSignInDelegate{
             print(error.localizedDescription)
             return
         }
+        
         guard let auth = user.authentication else {return}
         let credentials = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
         Auth.auth().signIn(with: credentials) {
@@ -29,10 +31,12 @@ class SignUpView: UIViewController, GIDSignInDelegate{
                 print(error.localizedDescription)
             }else{
                 print("Log in successful")
+                let user = Auth.auth().currentUser
+                let email = user?.email
+                self.writeUserData(email: email!)
                 self.performSegue(withIdentifier: "HomeViewSegue", sender: self)
             }
         }
-        
     }
     
     @IBAction func signUpWithGoogle(_ sender: Any) {
@@ -49,6 +53,7 @@ class SignUpView: UIViewController, GIDSignInDelegate{
             Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!){(user, error)
                 in
                 if(error == nil){
+                    self.writeUserData(email: self.emailField.text!)
                     self.performSegue(withIdentifier: "HomeViewSegue", sender: self)
                 }else{
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -58,6 +63,12 @@ class SignUpView: UIViewController, GIDSignInDelegate{
                 }
             }
         }
+    }
+    
+    func writeUserData(email : String){
+        let user = Auth.auth().currentUser
+        self.ref.child("users/\(user!.uid)/email").setValue(email)
+        self.ref.child("users/\(user!.uid)/firstTime").setValue(true)
     }
     
     override func viewDidLoad() {
