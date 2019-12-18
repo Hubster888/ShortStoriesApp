@@ -31,6 +31,7 @@ class WriteViewController: UIViewController{
     }
     
     @IBAction func publishButton(_ sender: Any) {
+       performSegue(withIdentifier: "preview", sender: nil)
     }
     
     @IBAction func saveButton(_ sender: Any) { //Read values under "users/userID"
@@ -114,7 +115,6 @@ class WriteViewController: UIViewController{
                 self.reference.child("users/\(self.currentUser!.uid)/tempId").setValue(0)
             })
         })
-        performSegue(withIdentifier: "saved", sender: nil)
     }
     
     private func updateStory(temporaryStoryID: Int){ // Function called when save button pressed and it is a pre-existing story
@@ -144,7 +144,6 @@ class WriteViewController: UIViewController{
                 }
             }
         })
-        performSegue(withIdentifier: "saved", sender: nil)
     }
 }
 

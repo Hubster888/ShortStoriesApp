@@ -105,7 +105,6 @@ class CreatePageViewController: UIViewController, UITableViewDelegate, UITableVi
         userStories.append(newStory)
         self.reference.child("users/\(self.currentUser!.uid)/userStories").setValue(userStories)
         self.tableView.reloadData()
-        //self.viewWillAppear(true)
     }
     
     func likeStoryWhileLiked(story: [String:Any], userStories: [[String:Any]], indexPathRow: Int){
@@ -120,7 +119,6 @@ class CreatePageViewController: UIViewController, UITableViewDelegate, UITableVi
         userStories.append(newStory)
         self.reference.child("users/\(self.currentUser!.uid)/userStories").setValue(userStories)
         self.tableView.reloadData()
-        //self.viewWillAppear(true)
     }
     
     func createStoryArray(){
@@ -138,7 +136,7 @@ class CreatePageViewController: UIViewController, UITableViewDelegate, UITableVi
                     let liked = story["liked"]
                     let published = story["published"]
                     let content = story["content"]
-                    let book = Story(title: title as! String, author: author as! String, numOfLikes: numOfLikes as! Int, liked: liked as! Bool, id: storyId as! Int, published: published as! Bool, content: content as! String)
+                    let book = Story(title: title as! String, author: author as! String, numOfLikes: numOfLikes as! Int, liked: liked as! Bool, id: storyId as! Int, published: published as! Bool, content: content as! String, theme: "None")
                     self.makeArray(book: book)
                 }
             }

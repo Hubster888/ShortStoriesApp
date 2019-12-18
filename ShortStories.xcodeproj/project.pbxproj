@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C15524523AAD0080032625D /* ReadPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C15524423AAD0080032625D /* ReadPage.swift */; };
 		2C1DA269239E477B00C64127 /* readMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DA268239E477B00C64127 /* readMainViewController.swift */; };
 		2C2CAF1A238BEDB90062D3D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C2CAF19238BEDB90062D3D0 /* GoogleService-Info.plist */; };
 		2C654851238C326F00DA6A82 /* TabNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C654850238C326F00DA6A82 /* TabNavigationController.swift */; };
 		2C81D9A3239469B200ED2FFF /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81D9A2239469B200ED2FFF /* Story.swift */; };
 		2C81D9A72394F2B300ED2FFF /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81D9A62394F2B300ED2FFF /* WriteViewController.swift */; };
+		2C87792623A21C9200D9DEEF /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C87792523A21C9200D9DEEF /* PreviewViewController.swift */; };
 		2CB5D4FF238D3E3C0053DF20 /* CreatePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB5D4FE238D3E3C0053DF20 /* CreatePageViewController.swift */; };
 		2CB5D504238D412E0053DF20 /* BookCellsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB5D502238D412E0053DF20 /* BookCellsTableViewCell.swift */; };
 		2CB5D505238D412E0053DF20 /* BookCellsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CB5D503238D412E0053DF20 /* BookCellsTableViewCell.xib */; };
@@ -30,12 +32,14 @@
 
 /* Begin PBXFileReference section */
 		03BB8BF9EC368992FAEBE3B6 /* Pods-ShortStories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShortStories.debug.xcconfig"; path = "Target Support Files/Pods-ShortStories/Pods-ShortStories.debug.xcconfig"; sourceTree = "<group>"; };
+		2C15524423AAD0080032625D /* ReadPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReadPage.swift; path = /Users/hubertrzeminski/Desktop/ShortStories/ShortStories/AdditionalViews/ReadPage.swift; sourceTree = "<absolute>"; };
 		2C1DA268239E477B00C64127 /* readMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = readMainViewController.swift; sourceTree = "<group>"; };
 		2C2CAF19238BEDB90062D3D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C654850238C326F00DA6A82 /* TabNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNavigationController.swift; sourceTree = "<group>"; };
 		2C81D9A2239469B200ED2FFF /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Story.swift; path = /Users/hubertrzeminski/Desktop/ShortStories/ShortStories/CustomClasses/Story.swift; sourceTree = "<absolute>"; };
 		2C81D9A62394F2B300ED2FFF /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
-		2CB5D4FE238D3E3C0053DF20 /* CreatePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePageViewController.swift; sourceTree = "<group>"; };
+		2C87792523A21C9200D9DEEF /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		2CB5D4FE238D3E3C0053DF20 /* CreatePageViewController.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = CreatePageViewController.swift; sourceTree = "<group>"; };
 		2CB5D502238D412E0053DF20 /* BookCellsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCellsTableViewCell.swift; sourceTree = "<group>"; };
 		2CB5D503238D412E0053DF20 /* BookCellsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCellsTableViewCell.xib; sourceTree = "<group>"; };
 		2CD5BEDE238BCF4600DA91DF /* ShortStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShortStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +79,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2C87792723A21C9E00D9DEEF /* AdditionalViews */ = {
+			isa = PBXGroup;
+			children = (
+				2C15524423AAD0080032625D /* ReadPage.swift */,
+				2C87792523A21C9200D9DEEF /* PreviewViewController.swift */,
+			);
+			path = AdditionalViews;
+			sourceTree = "<group>";
+		};
 		2CB5D506238D43430053DF20 /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +122,7 @@
 				2CF487F6238C0DE0008F1326 /* MainViews */,
 				2CD5BEF8238BD24E00DA91DF /* signInViews */,
 				2CB5D506238D43430053DF20 /* CustomClasses */,
+				2C87792723A21C9E00D9DEEF /* AdditionalViews */,
 				2CD5BEE1238BCF4600DA91DF /* AppDelegate.swift */,
 				2CD5BEE3238BCF4600DA91DF /* SceneDelegate.swift */,
 				2C2CAF19238BEDB90062D3D0 /* GoogleService-Info.plist */,
@@ -295,10 +309,12 @@
 				2CD5BEFC238BD2F600DA91DF /* SignUpView.swift in Sources */,
 				2C81D9A72394F2B300ED2FFF /* WriteViewController.swift in Sources */,
 				2CF487F5238C0DD3008F1326 /* HomeViewController.swift in Sources */,
+				2C87792623A21C9200D9DEEF /* PreviewViewController.swift in Sources */,
 				2CD5BEE4238BCF4600DA91DF /* SceneDelegate.swift in Sources */,
 				2CB5D504238D412E0053DF20 /* BookCellsTableViewCell.swift in Sources */,
 				2CB5D4FF238D3E3C0053DF20 /* CreatePageViewController.swift in Sources */,
 				2C81D9A3239469B200ED2FFF /* Story.swift in Sources */,
+				2C15524523AAD0080032625D /* ReadPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
